@@ -6,7 +6,11 @@ import "./index.css";
 
 const App = () => (
   <div>
-    <Button>consumer</Button>
+    <Button
+      className="button-classic"
+    >
+      consumer
+    </Button>
   </div>
 );
 
