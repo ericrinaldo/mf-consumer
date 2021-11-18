@@ -1,5 +1,5 @@
 {
-  "name": "wp5-starter-react",
+  "name": "mf-consumer-jet",
   "version": "1.0.5",
   "scripts": {
     "build": "webpack --mode production",
