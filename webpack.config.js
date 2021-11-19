@@ -49,7 +49,7 @@ module.exports = (_, argv) => ({
       filename: "remoteEntry.js",
       remotes: {
         components: 'components@https://mf-module.vercel.app/remoteEntry.js',
-        'components/Button': 'components/Button@https://mf-module.vercel.app/remoteEntry.js',
+        // 'components': 'components@http://localhost:3500/modules?module=design-system&app=mf-consumer',
       },
       exposes: {},
       shared: {
