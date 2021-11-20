@@ -1,5 +1,6 @@
 {
-  "name": "mf-consumer-jet",
+  "name": "mf-consumer",
+  "stage": "prod",
   "version": "1.0.5",
   "scripts": {
     "build": "webpack --mode production",

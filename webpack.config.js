@@ -1,7 +1,7 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
 
-const deps = require("./package.json").dependencies;
+const package = require('./package.json');
 
 
 module.exports = (_, argv) => ({
@@ -48,19 +48,18 @@ module.exports = (_, argv) => ({
       name: "consumer",
       filename: "remoteEntry.js",
       remotes: {
-        // components: 'components@https://mf-module.vercel.app/remoteEntry.js',
-        'components': 'components@http://localhost:3500/modules?consumer=mf-consumer&module=design-system',
+        'components': `components@http://localhost:3500/modules?consumer=${package.name}&consumerStage=${package.stage}&module=design-system`,
       },
       exposes: {},
       shared: {
-        ...deps,
+        ...package.dependencies,
         react: {
           singleton: true,
-          requiredVersion: deps.react,
+          requiredVersion: package.dependencies.react,
         },
         "react-dom": {
           singleton: true,
-          requiredVersion: deps["react-dom"],
+          requiredVersion: package.dependencies["react-dom"],
         },
       },
     }),
