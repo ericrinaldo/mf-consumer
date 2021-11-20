@@ -1,3 +1,11 @@
-Cool React template, as seen in awesome tutorial https://www.youtube.com/watch?v=E3NHd-PkLrQ
+Sarted with this great starter package: https://github.com/jherr/wp5-starter-react
 
-2020 update - if you do git clone you'll be missing the .babelrc file and it's easy to miss that. Reference the repo code
+## start
+`yarn start`
+
+## build
+`yarn build`
+
+## remark (!)
+note the path for remotes in the ModuleFederationPlugin of webpack.config.js.
+this is an example for use of module resolver api (here at localhost)
